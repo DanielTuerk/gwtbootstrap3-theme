@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='theme'>
+    <inherits name="com.google.gwt.precompress.Precompress"/>
+
+    <!-- include theme -->
+    <public path='css'>
+        <include name='*.css'/>
+    </public>
+    <stylesheet src='bootswatch.css'/>
+</module>
