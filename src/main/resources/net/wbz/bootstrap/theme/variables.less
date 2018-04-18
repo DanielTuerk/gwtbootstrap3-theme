@@ -18,7 +18,7 @@
 @gray-dark: lighten(@gray-base, 20%); // #333
 @gray: lighten(@gray-base, 33.5%); // #555
 @gray-light: #222a44; // #999
-@gray-lighter: #818091; // #eee
+@gray-lighter: #9998A9; // #eee
 
 @brand-primary: @colful1;
 @brand-success: #5cb85c;
@@ -33,7 +33,8 @@
 //** Background color for `<body>`.
 @body-bg: #171724;
 //** Global text color on `<body>`.
-@text-color: @gray-lighter;
+//@text-color: #ffffff;
+@text-color: rgba(236, 236, 236, 0.87);
 @text-color-bright: #ffffff;
 
 //** Global textual link color.
@@ -379,7 +380,7 @@
 
 // Navbar toggle
 @navbar-default-toggle-hover-bg: @navbar-default-link-hover-bg;
-@navbar-default-toggle-icon-bar-bg: @text-color;
+@navbar-default-toggle-icon-bar-bg: @text-color-bright;
 @navbar-default-toggle-border-color: transparent;
 
 //=== Inverted navbar
@@ -404,7 +405,7 @@
 
 // Inverted navbar toggle
 @navbar-inverse-toggle-hover-bg: @navbar-inverse-link-hover-bg;
-@navbar-inverse-toggle-icon-bar-bg: @text-color;
+@navbar-inverse-toggle-icon-bar-bg: @text-color-bright;
 @navbar-inverse-toggle-border-color: transparent;
 
 //== Navs
