@@ -93,7 +93,6 @@
 
 .dropdown-header {
   font-size: @font-size-small;
-  color: @text-color-bright;
 }
 
 // Tables =====================================================================
@@ -117,7 +116,7 @@ table,
 
   > thead > tr > th {
     background-color: @gray-dark;
-    border-bottom-color: @colful6;
+    border-bottom-color: @gray-lighter;
   }
   > tbody > tr > th,
   > tfoot > tr > th,
@@ -246,13 +245,13 @@ label,
 
 .nav-tabs {
   > li > a {
-    color: @text-color-bright;
+    color: @text-color;
   }
 }
 
 .nav-pills {
   > li > a {
-    color: @text-color-bright;
+    color: @text-color;
   }
 }
 
@@ -333,10 +332,14 @@ a.list-group-item {
 }
 
 .panel {
-  border: none;
+  border: 2px solid @gray-light;
 
   &-default > .panel-heading {
-    background-color: @table-bg-hover;
+    background-color: @gray-light;
+    color: @text-color;
+  }
+  &-default > .panel-footer {
+    background-color: @gray-light;
     color: @text-color;
   }
 }
@@ -348,10 +351,10 @@ a.list-group-item {
 
 .modal {
   padding: 0;
-
+  background-color: @body-bg;
   &-header,
   &-footer {
-    background-color: @table-bg-hover;
+    background-color: @gray-light;
     border: none;
     border-radius: 0;
   }
@@ -361,8 +364,4 @@ a.list-group-item {
   &-title {
     border: none;
   }
-}
-
-.background-panel {
-  background-color: @panel-bg;
 }
