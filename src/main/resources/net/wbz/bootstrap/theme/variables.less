@@ -7,15 +7,15 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #000;
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             #4E5D6C;   // #999
-@gray-light-darken:      darken(@gray-light, 3%);
-@gray-lighter: #868692; // #eee
+@gray-base: #202f40;
+@gray-darker: darken(@gray-base, 5%);
+@gray-dark: lighten(@gray-base, 5%);
 
-@brand-primary:         #DF691A;
+@gray-light: #105d92;   // #999
+@gray-light-darken: lighten(@body-bg,5%);
+@gray-lighter: #426c92; // #eee
+
+@brand-primary: @gray-lighter;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -27,7 +27,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #2B3E50;
+@body-bg: @gray-base;
 //** Global text color on `<body>`.
 @text-color:            #ededef;
 
@@ -70,7 +70,7 @@
 @headings-font-family: inherit;
 @headings-font-weight: 100;
 @headings-line-height: 1.1;
-@headings-color: inherit;
+@headings-color: @text-color;
 
 
 //== Iconography
@@ -104,12 +104,12 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base: 2;
-@border-radius-large: 3;
-@border-radius-small: 1;
+@border-radius-base: 1;
+@border-radius-large: 2;
+@border-radius-small: 0;
 
 //** Global color for active items (e.g., navs or dropdowns).
-@component-active-color:    #fff;
+@component-active-color:    @gray-lighter;
 //** Global background color for active items (e.g., navs or dropdowns).
 @component-active-bg:       @brand-primary;
 
@@ -131,7 +131,7 @@
 //** Default background color used for all tables.
 @table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               @gray-light;
+@table-bg-accent:               @gray-darker;
 //** Background color used for `.table-hover`.
 @table-bg-hover:                darken(@gray-light, 3%);
 @table-bg-active:               @table-bg-hover;
@@ -183,12 +183,12 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       #fff;
+@input-bg: @gray-lighter;
 //** `<input disabled>` background color
-@input-bg-disabled:              @gray-lighter;
+@input-bg-disabled:              @gray-dark;
 
 //** Text color for `<input>`s
-@input-color:                    @body-bg;
+@input-color:                    @text-color;
 //** `<input>` border color
 @input-border:                   transparent;
 
@@ -489,7 +489,7 @@
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
 @jumbotron-bg:                   @gray-light;
-@jumbotron-heading-color:        inherit;
+@jumbotron-heading-color:        @text-color;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 @jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
 
@@ -868,4 +868,4 @@
 //** Point at which .dl-horizontal becomes horizontal
 @dl-horizontal-breakpoint:    @grid-float-breakpoint;
 //** Horizontal line color.
-@hr-border:                   lighten(@gray-light, 5%);
+@hr-border:                   lighten(@gray-lighter, 5%);
